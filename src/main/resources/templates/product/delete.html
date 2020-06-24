@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h1>Delete Product</h1>
+
+<form th:action="@{'/product/'+ ${product.getId()} +'/delete'}" th:method="POST">
+
+    <h2>Are you sure you want to Delete this Product?</h2>
+
+    <h3 th:text="${product.getName()}" ></h3>
+    <img th:src="${product.getImg()}" alt="">
+
+    <input type="submit" value="Delete Product">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+</head>
+<body>
+
+    <h1>Product</h1>
+    <br>
+    <h3 th:text="${product.getName()}"></h3>
+    <br>
+    <h5>Description</h5>
+    <p th:text="${product.getDescription()}"></p>
+    <h5>Price</h5>
+    <p>$<span th:text="${product.getPrice()}"></span></p>
+    <h5>Image</h5>
+    <img th:src="${product.getImg()}" alt="">
+
+    <a th:href="@{'/product/' + ${product.getId()} + '/edit'}">Edit</a>
+
+    <a th:href="@{'/product/' + ${product.getId()} + '/delete'}">Delete</a>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+</head>
+<body>
+
+<div th:each="product : ${products}">
+    <p th:text="${product.getName()}" />
+    <a th:href="@{'/product/'+ ${product.getId()}}">Link To Product</a>
+</div>
+
+
+</body>
+</html>
