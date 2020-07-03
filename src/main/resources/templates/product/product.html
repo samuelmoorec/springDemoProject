@@ -1,7 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
+    <title>Create</title>
+    <div th:replace="partials :: styling"></div>
 </head>
 <body>
 
@@ -14,7 +15,7 @@
     <h5>Price</h5>
     <p>$<span th:text="${product.getPrice()}"></span></p>
     <h5>Image</h5>
-    <img th:src="${product.getImg()}" alt="">
+    <img width="200px" height="auto" th:src="${product.getImg()}" alt="">
 
     <a th:href="@{'/product/' + ${product.getId()} + '/edit'}">Edit</a>
 

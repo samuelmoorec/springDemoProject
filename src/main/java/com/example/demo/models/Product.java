@@ -25,6 +25,10 @@ public class Product {
     @Column(columnDefinition="TEXT")
     private String img;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Product() {
     }
 
